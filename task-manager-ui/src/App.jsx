@@ -3,7 +3,7 @@ import { Dashboard } from './Dashboard';
 import { TaskManagement } from './TaskManagement';
 import { AuthForm } from './AuthForm';
 
-export const API_BASE_URL = "http://localhost:5000/api";
+export const API_BASE_URL = "https://task-manager-b8rc.onrender.com/";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
