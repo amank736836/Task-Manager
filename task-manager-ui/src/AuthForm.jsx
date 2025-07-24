@@ -16,7 +16,7 @@ export const AuthForm = ({ type, onAuthSuccess, showMessage }) => {
           ? { email, password }
           : { username, email, password, role };
 
-      const res = await fetch(`${API_BASE_URL}/auth/${endpoint}`, {
+      const res = await fetch(`${API_BASE_URL}/api/auth/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,6 +25,19 @@ export const AuthForm = ({ type, onAuthSuccess, showMessage }) => {
       });
 
       console.log("Response:", res);
+      console.log("Response status:", res.status);
+      console.log("Response headers:", res.headers);
+
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await res.text();
+        console.error("Expected JSON but got:", text);
+        showMessage(
+          "Server error: Expected JSON response but got HTML. Is the API server running?",
+          "error"
+        );
+        return;
+      }
 
       const data = await res.json();
 
