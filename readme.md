@@ -1,12 +1,11 @@
 
-
 ````markdown
 # 📝 Task Manager API (MERN Stack with Roles & Analytics)
 
 This project implements a **Task Manager API** with **user authentication**, **role-based access control**, full **CRUD operations** for tasks, **filtering**, **searching**, **sorting**, **pagination**, and **dashboard analytics**.
 
-- **Backend:** Node.js + Express + MongoDB (Mongoose)
-- **Frontend:** React (Vite) with inline CSS
+- **Live Frontend:** [https://task-manager-o757.vercel.app](https://task-manager-o757.vercel.app)
+- **Live Backend (API):** [https://task-manager-b8rc.onrender.com](https://task-manager-b8rc.onrender.com)
 
 ---
 
@@ -74,13 +73,27 @@ This project implements a **Task Manager API** with **user authentication**, **r
 
 ## 🚀 Setup Instructions
 
+### 🔗 Live Links
+
+- **Frontend:** [https://task-manager-o757.vercel.app](https://task-manager-o757.vercel.app)
+- **Backend (API):** [https://task-manager-b8rc.onrender.com](https://task-manager-b8rc.onrender.com)
+
+> Update your `API_BASE_URL` in frontend code to:
+
+```js
+export const API_BASE_URL = "https://task-manager-b8rc.onrender.com";
+````
+
+---
+
 ### Backend Setup
 
 1. **Clone the repo**
+
    ```bash
    git clone <your-repo-link>
    cd task-manager-api
-````
+   ```
 
 2. **Project Structure**
 
@@ -138,7 +151,7 @@ This project implements a **Task Manager API** with **user authentication**, **r
 3. **Update API URL**
 
    ```js
-   export const API_BASE_URL = "http://localhost:5000";
+   export const API_BASE_URL = "https://task-manager-b8rc.onrender.com";
    ```
 
 4. **Start Frontend**
@@ -151,9 +164,7 @@ This project implements a **Task Manager API** with **user authentication**, **r
 
 ## 📡 API Endpoints
 
-All API routes are prefixed with `/api`.
-
----
+*All API routes are prefixed with `/api`.*
 
 ### 🔐 Authentication
 
@@ -308,10 +319,3 @@ Feel free to explore, open issues, suggest improvements, or submit PRs!
 ---
 
 ```
-
-Let me know if you’d like:
-- A `package.json` template
-- Folder structure as actual files
-- Screenshots or badges added
-- Deployment instructions (Render/Netlify)
-- Markdown version with collapsible sections
